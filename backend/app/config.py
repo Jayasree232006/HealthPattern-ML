@@ -33,7 +33,7 @@ class Settings(BaseModel):
         ]
     )
     api_v1_prefix: str = "/api/v1"
-    project_name: str = "Health AI Assistant API"
+    project_name: str = "Rare & Common Disease Detector API"
     version: str = "0.1.0"
     model_artifacts_dir: Optional[str] = Field(
         default_factory=lambda: os.getenv("MODEL_ARTIFACTS_DIR", None)

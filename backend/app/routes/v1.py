@@ -24,7 +24,7 @@ def api_v1_health() -> HealthResponse:
     "/predict",
     response_model=PredictResponse,
     status_code=status.HTTP_200_OK,
-    summary="Health condition prediction prototype endpoint",
+    summary="Experimental symptom-pattern exploration endpoint",
 )
 def api_v1_predict(request: PredictRequest) -> PredictResponse:
     """Validate symptoms and return prediction status.

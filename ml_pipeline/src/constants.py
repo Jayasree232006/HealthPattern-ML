@@ -10,7 +10,7 @@ Shared 5 common conditions:
 
 from typing import Dict, List, Optional
 
-# Canonical condition keys used in Care Atlas ML pipeline
+# Canonical condition keys used by the disease pattern detector
 CANONICAL_COMMON_COLD = "common_cold"
 CANONICAL_ALLERGY = "allergy"
 CANONICAL_MIGRAINE = "migraine"

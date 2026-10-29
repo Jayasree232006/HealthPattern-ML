@@ -1,6 +1,6 @@
 """Prediction service interface and model coordinator.
 
-Connects FastAPI backend to the Care Atlas ML Pipeline (ml_pipeline).
+Connects the FastAPI backend to the ML pipeline (ml_pipeline).
 Handles path resolution, model caching, safe error boundaries, and response mapping.
 """
 
@@ -111,7 +111,7 @@ class PredictionService:
             self._predictor = predictor
             self._is_loaded = True
             self._load_error = None
-            logger.info("Care Atlas ML predictor successfully initialized from %s", self._artifacts_dir)
+            logger.info("Disease pattern predictor successfully initialized from %s", self._artifacts_dir)
 
         except Exception as e:
             self._is_loaded = False

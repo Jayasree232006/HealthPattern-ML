@@ -1,4 +1,4 @@
-"""Care Atlas ML Pipeline package."""
+"""Rare & Common Disease Detector ML pipeline package."""
 
 from .constants import (
     SHARED_5_CLASSES,

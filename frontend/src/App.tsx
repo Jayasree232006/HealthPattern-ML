@@ -164,9 +164,10 @@ function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <a className="brand" href="#home" aria-label="Care Atlas home">
+        <a className="brand" href="#home" aria-label="Rare & Common Disease Detector home">
           <span className="brand-mark" aria-hidden="true">+</span>
-          <span>Care Atlas<span className="brand-period">.</span></span>
+          <span className="brand-full">Rare &amp; Common Disease Detector<span className="brand-period">.</span></span>
+          <span className="brand-short">Disease Pattern Detector<span className="brand-period">.</span></span>
         </a>
         <div className="prototype-label">
           <span className="live-dot" aria-hidden="true" />
@@ -177,11 +178,11 @@ function App() {
       <main id="home" className="workspace">
         <section className="intro-row" aria-labelledby="page-title">
           <div>
-            <p className="eyebrow">A careful look at symptom patterns</p>
-            <h1 id="page-title">Start with your own words.</h1>
+            <p className="eyebrow">Experimental educational prototype</p>
+            <h1 id="page-title">Disease Pattern Detector</h1>
           </div>
           <p className="intro-copy">
-            Explore experimental common-condition model scores and separate, literature-based rare-condition matches.
+            Describe symptoms in your own words. AI-assisted symptom understanding helps you review what was extracted, then explore experimental ML pattern scores for five common conditions and separate literature-based matches for four selected rare conditions.
           </p>
         </section>
 
@@ -243,7 +244,7 @@ function App() {
                 {error && <div className="form-error" role="alert">{error}</div>}
 
                 <button className="primary-button" type="submit" disabled={isLoading}>
-                  {isLoading ? <><span className="loader-ring" aria-hidden="true" />Sending to Care Atlas…</> : <>Understand my description <span aria-hidden="true">→</span></>}
+                  {isLoading ? <><span className="loader-ring" aria-hidden="true" />Understanding symptoms…</> : <>Understand my description <span aria-hidden="true">→</span></>}
                 </button>
               </form>
             </section>
@@ -332,7 +333,7 @@ function App() {
         )}
 
         <footer className="page-disclaimer">
-          <strong>Educational use only.</strong> Care Atlas is not clinically validated and does not provide diagnosis or treatment advice. Consult a qualified healthcare professional about health concerns.
+          <strong>Educational use only.</strong> Rare &amp; Common Disease Detector is an experimental prototype, not a medical diagnostic tool. Common-condition model scores are experimental and are not clinical probabilities; rare-condition matches are literature-based indicators, not diagnoses. Consult a qualified healthcare professional about health concerns.
         </footer>
       </main>
     </div>

@@ -1,6 +1,6 @@
-# Care Atlas ML Pipeline (Version 0.1.0)
+# Rare & Common Disease Detector ML Pipeline (Version 0.1.0)
 
-This directory contains the training routines, dataset preprocessing, NLP phrase/negation parser, rare disease matching module, and inference service for the **Care Atlas Health AI Assistant** educational prototype.
+This directory contains the training routines, dataset preprocessing, NLP phrase/negation parser, rare disease matching module, and inference service for the **Rare & Common Disease Detector** experimental educational prototype.
 
 > [!WARNING]
 > **Educational & Research Prototype Only**:
@@ -21,7 +21,7 @@ The pipeline supports three distinct capabilities:
 3. **Source-Attributed Rare Condition Matcher**:
    - Covers 4 rare diseases: Systemic Lupus Erythematosus (SLE), Myasthenia Gravis (MG), Wilson Disease, and Hereditary Angioedema (HAE).
    - Profiles built with literature citations from Orphanet, NIH/MedlinePlus/NINDS/NIDDK, and NORD.
-   - **Score Separation**: Rare disease similarity scores are computed via symptom overlap + hallmark presentation bonuses and are **kept strictly separate from common classifier probabilities**.
+  - **Score Separation**: Rare disease similarity scores are computed via symptom overlap + hallmark presentation bonuses and are **kept strictly separate from experimental common-condition pattern scores**.
 
 ---
 

@@ -1,4 +1,4 @@
-"""Automated unit and integration tests for Care Atlas ML Pipeline.
+"""Automated unit and integration tests for the ML pipeline.
 
 Tests:
 1. Label normalization and mapping for 5 shared conditions across both datasets.

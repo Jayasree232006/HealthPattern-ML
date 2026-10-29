@@ -6,7 +6,7 @@ It serves as a coordination specification to align artifacts, schemas, preproces
 ---
 
 ## 1. Context & Goal
-The backend provides a RESTful interface for the **Health AI Assistant** educational prototype.
+The backend provides a RESTful interface for the **Rare & Common Disease Detector** experimental educational prototype.
 Currently, when a request is made to `POST /api/v1/predict`, the backend validates the request schema and returns a `model_unavailable` response because no verified ML model artifact is loaded.
 
 To integrate the ML pipeline cleanly:

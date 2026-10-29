@@ -85,7 +85,7 @@ async function submitDescription(user: ReturnType<typeof userEvent.setup>) {
   await user.click(screen.getByRole('button', { name: /understand my description/i }));
 }
 
-describe('Care Atlas live exploration', () => {
+describe('Rare & Common Disease Detector live exploration', () => {
   it('renders each symptom assertion returned by the API', async () => {
     mockSuccessfulFetch();
     const user = userEvent.setup();
@@ -177,7 +177,7 @@ describe('Care Atlas live exploration', () => {
     await user.type(screen.getByRole('textbox', { name: /your description/i }), 'A headache today.');
     await user.click(screen.getByRole('button', { name: /understand my description/i }));
 
-    expect(screen.getByRole('button', { name: /sending to care atlas/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /understanding symptoms/i })).toBeTruthy();
     resolveResponse(new Response(JSON.stringify(responsePayload()), { status: 200 }));
     expect(await screen.findByRole('heading', { name: 'What we understood' })).toBeTruthy();
   });

@@ -9,7 +9,7 @@ settings = get_settings()
 app = FastAPI(
     title=settings.project_name,
     version=settings.version,
-    description="Educational health condition prediction prototype API.",
+    description="Experimental educational API for AI-assisted symptom understanding, common-condition pattern scores, and separate rare-condition literature matches. Not a medical diagnostic tool.",
 )
 
 # Configure development and production CORS for Vite frontend
