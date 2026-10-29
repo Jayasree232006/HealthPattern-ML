@@ -1,0 +1,277 @@
+{
+  "pipeline_version": "0.1.0",
+  "created_at": "2026-10-27T18:20:31.326316Z",
+  "target_classes": [
+    "allergy",
+    "common_cold",
+    "gerd",
+    "migraine",
+    "urinary_tract_infection"
+  ],
+  "display_labels": {
+    "allergy": "Allergy",
+    "common_cold": "Common Cold",
+    "gerd": "Gastroesophageal Reflux Disease (GERD)",
+    "migraine": "Migraine",
+    "urinary_tract_infection": "Urinary Tract Infection (UTI)"
+  },
+  "text_classifier": {
+    "model_name": "gretel_tfidf_logistic_regression",
+    "created_at": "2026-10-27T18:20:31.234047Z",
+    "target_classes": [
+      "allergy",
+      "common_cold",
+      "gerd",
+      "migraine",
+      "urinary_tract_infection"
+    ],
+    "split_metadata": {
+      "raw_train_total": 853,
+      "raw_test_total": 212,
+      "filtered_train_total": 189,
+      "filtered_test_total": 49,
+      "train_class_counts": {
+        "allergy": 40,
+        "urinary_tract_infection": 39,
+        "common_cold": 39,
+        "gerd": 39,
+        "migraine": 32
+      },
+      "test_class_counts": {
+        "gerd": 10,
+        "migraine": 10,
+        "common_cold": 10,
+        "allergy": 10,
+        "urinary_tract_infection": 9
+      }
+    },
+    "evaluation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9599498746867168,
+      "weighted_f1": 0.9591325251905274,
+      "labels": [
+        "allergy",
+        "common_cold",
+        "gerd",
+        "migraine",
+        "urinary_tract_infection"
+      ],
+      "confusion_matrix": [
+        [
+          9,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          10,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          9
+        ]
+      ],
+      "classification_report": {
+        "allergy": {
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1-score": 0.9,
+          "support": 10.0
+        },
+        "common_cold": {
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1-score": 0.9523809523809523,
+          "support": 10.0
+        },
+        "gerd": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support": 10.0
+        },
+        "migraine": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "urinary_tract_infection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        },
+        "accuracy": 0.9591836734693877,
+        "macro avg": {
+          "precision": 0.9618181818181817,
+          "recall": 0.96,
+          "f1-score": 0.9599498746867168,
+          "support": 49.0
+        },
+        "weighted avg": {
+          "precision": 0.9610389610389611,
+          "recall": 0.9591836734693877,
+          "f1-score": 0.9591325251905274,
+          "support": 49.0
+        }
+      }
+    }
+  },
+  "symptom_classifier": {
+    "model_name": "kaggle_symptom_multinomial_nb",
+    "created_at": "2026-10-27T18:20:31.325208Z",
+    "feature_count": 132,
+    "target_classes": [
+      "allergy",
+      "common_cold",
+      "gerd",
+      "migraine",
+      "urinary_tract_infection"
+    ],
+    "split_metadata": {
+      "raw_total_rows": 605,
+      "duplicate_rows_dropped": 569,
+      "unique_patterns_total": 36,
+      "unique_patterns_per_class": {
+        "migraine": 10,
+        "common_cold": 9,
+        "gerd": 7,
+        "allergy": 5,
+        "urinary_tract_infection": 5
+      },
+      "train_unique_patterns": 27,
+      "test_unique_patterns": 9,
+      "train_class_counts": {
+        "common_cold": 7,
+        "migraine": 7,
+        "gerd": 5,
+        "allergy": 4,
+        "urinary_tract_infection": 4
+      },
+      "test_class_counts": {
+        "migraine": 3,
+        "common_cold": 2,
+        "gerd": 2,
+        "urinary_tract_infection": 1,
+        "allergy": 1
+      }
+    },
+    "evaluation": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "labels": [
+        "allergy",
+        "common_cold",
+        "gerd",
+        "migraine",
+        "urinary_tract_infection"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "classification_report": {
+        "allergy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "common_cold": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "gerd": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "migraine": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "urinary_tract_infection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        }
+      }
+    }
+  },
+  "disclaimer": "Educational and research prototype only. Models are trained on small, synthetic, and augmented datasets and must not be used as clinical diagnostic tools."
+}

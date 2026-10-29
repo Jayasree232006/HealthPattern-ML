@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+dist/
+.vite/
+
+# Environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+!.env.example
+!backend/.env.example
+# Datasets and generated model artifacts
+ml_pipeline/data/*
+!ml_pipeline/data/.gitkeep
+# Keep required trained model artifacts for the prototype to function
+!ml_pipeline/artifacts/metadata.json
+!ml_pipeline/artifacts/text_classifier.joblib
+!ml_pipeline/artifacts/symptom_classifier.joblib
+ml_pipeline/artifacts/*.tmp
+*.pkl
+
+
+*.pickle
+*.onnx
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+
